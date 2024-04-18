@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Price Prediction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+
+<h1>Car Price Prediction</h1>
+
+<form action="/predict" method="post">
+    <label for="Kilometers_Driven">Kilometers Driven:</label>
+    <input type="text" name="Kilometers_Driven" required>
+
+    <label>Location:</label>
+    <input type="text" name="Location" required>
+    <label for="Year">Year:</label>
+    <input type="text" name="Year" required>
+
+    <label for="Owner_Type">Owner Type:</label>
+    <select name="Owner_Type" required>
+        <option value="0">First</option>
+        <option value="1">Second</option>
+        <option value="2">Third</option>
+        <option value="3">Fourth & Above</option>
+    </select>
+
+    <label for="Mileage">Mileage (kmpl):</label>
+    <input type="text" name="Mileage" required>
+
+    <label for="Engine">Engine (cc):</label>
+    <input type="text" name="Engine" required>
+
+    <label for="Power">Power (bhp):</label>
+    <input type="text" name="Power" required>
+
+    <label for="Seats">Seats:</label>
+    <input type="text" name="Seats" required>
+
+    <label for="Fuel_Type">Fuel Type:</label>
+    <select name="Fuel_Type" required>
+        <option value="Petrol">Petrol</option>
+        <option value="Diesel">Diesel</option>
+        <option value="CNG">CNG</option>
+        <option value="LPG">LPG</option>
+    </select>
+
+    <input type="submit" value="Predict">
+</form>
+
+</body>
+</html>
