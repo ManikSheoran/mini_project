@@ -27,7 +27,11 @@ df.drop(["Location", "Fuel_Type", "Transmission"], axis=1, inplace=True)
 
 # Train Test Split
 X = df.loc[:, ['Kilometers_Driven', 'Year', 'Owner_Type', 'Mileage', 'Engine', 'Power',
-               'Seats', 'Fuel_Type_CNG', 'Fuel_Type_Diesel', 'Fuel_Type_LPG', 'Fuel_Type_Petrol']]
+               'Seats', 'Fuel_Type_CNG', 'Fuel_Type_Diesel', 'Fuel_Type_LPG', 'Fuel_Type_Petrol',
+               'Transmission_Manual','Location_Ahmedabad', 'Location_Bangalore',
+               'Location_Chennai', 'Location_Coimbatore', 'Location_Delhi',
+               'Location_Hyderabad', 'Location_Jaipur', 'Location_Kochi',
+               'Location_Kolkata', 'Location_Mumbai', 'Location_Pune']]
 y = df.loc[:, ['Price']]
 
 from sklearn.model_selection import train_test_split
