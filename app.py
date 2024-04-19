@@ -53,7 +53,7 @@ def predict():
 
     prediction = model.predict(input_scaled)
 
-    return render_template('result.html', prediction=round(prediction[0], 2))
+    return render_template('result.html', prediction=abs(round(prediction[0], 2)))
 
 
 if __name__ == '__main__':

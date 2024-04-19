@@ -5,10 +5,47 @@ body {
     padding: 0;
 }
 
-h1, h2, p  {
+h1 {
     text-align: center;
     color: #ffc800;
 }
+
+
+h2{
+    font-size: 50px;
+    text-align: center;
+    color: #ffc800;
+}
+
+p{
+    font-size: 20px;
+    text-align: center;
+    color: #ffc800;
+} 
+
+span{
+    font-size: 25px;
+    text-align: center;
+    color: #ffc800;
+}
+
+div{
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+button {
+    background-color: #ffc800;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}    
 
 form {
     max-width: 500px;
