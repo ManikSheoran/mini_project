@@ -34,7 +34,19 @@ def predict():
         'Fuel_Type_CNG': [1 if input_data['Fuel_Type'] == 'CNG' else 0],
         'Fuel_Type_Diesel': [1 if input_data['Fuel_Type'] == 'Diesel' else 0],
         'Fuel_Type_LPG': [1 if input_data['Fuel_Type'] == 'LPG' else 0],
-        'Fuel_Type_Petrol': [1 if input_data['Fuel_Type'] == 'Petrol' else 0]
+        'Fuel_Type_Petrol': [1 if input_data['Fuel_Type'] == 'Petrol' else 0],
+        'Transmission_Manual': [1 if input_data['Transmission'] == 'Manual' else 0],
+        'Location_Ahmedabad': [1 if input_data['Location'] == 'Ahmedabad' else 0],
+        'Location_Bangalore': [1 if input_data['Location'] == 'Bangalore' else 0],
+        'Location_Chennai': [1 if input_data['Location'] == 'Chennai' else 0],
+        'Location_Coimbatore': [1 if input_data['Location'] == 'Coimbatore' else 0],
+        'Location_Delhi': [1 if input_data['Location'] == 'Delhi' else 0],
+        'Location_Hyderabad': [1 if input_data['Location'] == 'Hyderabad' else 0],
+        'Location_Jaipur': [1 if input_data['Location'] == 'Jaipur' else 0],
+        'Location_Kochi': [1 if input_data['Location'] == 'Kochi' else 0],
+        'Location_Kolkata': [1 if input_data['Location'] == 'Kolkata' else 0],
+        'Location_Mumbai': [1 if input_data['Location'] == 'Mumbai' else 0],
+        'Location_Pune': [1 if input_data['Location'] == 'Pune' else 0]
     })
 
     input_scaled = scaler.transform(input_df)
@@ -45,6 +57,6 @@ def predict():
 
 
 if __name__ == '__main__':
-    # app.run(debug=True)
+    app.run(debug=True)
     from waitress import serve
     serve(app, host='0.0.0.0', port=5000)
